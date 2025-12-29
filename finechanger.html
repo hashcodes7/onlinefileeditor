@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Filesystem Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="finechanger.css">
+</head>
+
+<body>
+
+  <aside>
+    <h3>Recent Files</h3>
+    <div class="recent" id="recentList">
+      <div class="empty">No recent files</div>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <button class="primary" id="openBtn">Open File</button>
+      <button class="primary" id="editBtn" disabled>Edit</button>
+      <button class="primary" id="saveBtn" disabled>Save</button>
+      <div class="status" id="status">No file opened</div>
+    </header>
+
+    <textarea id="editor" placeholder="Open a file to start editing…" disabled></textarea>
+
+    <footer>
+      <div>Chrome / Edge only • Files edited directly on disk</div>
+      <div>Auto-saves after 800ms</div>
+    </footer>
+  </main>
+
+  <script src="finechanger.js"></script>
+
+</body>
+
+</html>

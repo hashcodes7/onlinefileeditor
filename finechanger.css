@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+/* Sidebar */
+aside {
+  width: 260px;
+  background: #020617;
+  border-right: 1px solid #1e293b;
+  display: flex;
+  flex-direction: column;
+}
+
+aside h3 {
+  margin: 0;
+  padding: 14px;
+  font-size: 14px;
+  border-bottom: 1px solid #1e293b;
+  opacity: 0.9;
+}
+
+.recent {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.recent button {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 14px;
+  color: #e5e7eb;
+  cursor: pointer;
+  border-bottom: 1px solid #020617;
+  transition: background 0.2s;
+}
+
+.recent button:hover {
+  background: #1e293b;
+}
+
+.recent .empty {
+  padding: 14px;
+  opacity: 0.6;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Main Content Area */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+}
+
+button.primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+button.primary:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+button.primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button.primary:disabled {
+  background: #475569;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#editBtn:not([disabled]) {
+  background: #8b5cf6; /* Distinct color for Edit button */
+}
+
+#editBtn:not([disabled]):hover {
+  background: #7c3aed;
+}
+
+.status {
+  margin-left: auto;
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.status.error {
+  color: #ef4444;
+}
+
+.status.success {
+  color: #10b981;
+}
+
+textarea {
+  flex: 1;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  outline: none;
+  resize: none;
+  background: #020617;
+  color: #e5e7eb;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+footer {
+  padding: 8px 12px;
+  font-size: 12px;
+  background: #020617;
+  border-top: 1px solid #1e293b;
+  opacity: 0.7;
+  display: flex;
+  justify-content: space-between;
+}
